@@ -3,15 +3,223 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .navbar {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    .navbar-logo {
+        /* Size width and height */
+        flex: 0.95;
+        padding-left: 1rem;
+    }
+    
+    img {
+        width: 200px;
+    }
+    
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar-menu li {
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    
+    .navbar-menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    a.navHome:hover {
+        color: #f05129;
+    }
+    
+    a.navAbout:hover {
+        color: #f58a47;
+    }
+    
+    a.navServices:hover {
+        color: #faae7e;
+    }
+    
+    a.navContact:hover {
+        color: #f7d4bd;
+    }
+    
+    .systemResidential {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 35px;
+    }
+    
+    .systemResidential {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+    
+    .solarSystem {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex: 1;
+        transition: transform 0.2s;
+    }
+    
+    .solarSize {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    ul.solarCal {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+    
+    button {
+        background-color: #ea7418;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-menu.show {
+            display: flex;
+        }
+        .navbar-menu li {
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+        .navbar-toggle {
+            display: block;
+            cursor: pointer;
+        }
+        .navbar-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+</style>
 
 <body>
     <!-- Nav Bar-->
 
-    <nav></nav>
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="https://www.solararena.com.au/wp-content/uploads/2016/04/logo.png" alt=""></div>
+        <ul class="navbar-menu">
+            <li><a class="navHome" href="#">Home</a></li>
+            <li><a class="navAbout" href="#">About</a></li>
+            <li><a class="navServices" href="#">Services</a></li>
+            <li><a class="navContact" href="#">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
+
+    <h2>Best Solar Systems For Residential </h2>
+    <div class="systemResidential">
+
+
+        <div class="solarSystem">
+            <h2 class="solarSize">6.60 kWh</h2>
+            <ul class="solarCal">
+                <li>per day</li>
+                <li>per month</li>
+                <li>per week</li>
+            </ul>
+            <button>Learn more</button>
+        </div>
+        <div class="solarSystem">
+
+            <h2 class="solarSize">10.56 kWh</h2>
+            <ul class="solarCal">
+                <li>per day</li>
+                <li>per month</li>
+                <li>per week</li>
+            </ul>
+            <button>Learn more</button>
+        </div>
+        <div class="solarSystem">
+            <h2 class="solarSize">13.20 kWh</h2>
+            <ul class="solarCal">
+                <li>per day</li>
+                <li>per month</li>
+                <li>per week</li>
+            </ul>
+            <button>Learn more</button>
+        </div>
+    </div>
 </body>
+<script>
+    // JavaScript to handle the navbar toggle functionality
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+
+        navbarMenu.classList.toggle('show');
+
+    });
+</script>
 
 </html>
