@@ -14,6 +14,7 @@
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
+        font-weight: bold;
     }
     
     body {
@@ -115,13 +116,78 @@
     }
     
     button {
-        background-color: #ea7418;
+        background-color: #f2910a;
         color: #fff;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.2s;
+    }
+    /* Create two equal columns that floats next to each other */
+    
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        /* Should be removed. Only for demonstration */
+        border-radius: 15px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    p {
+        font-weight: bold;
+        padding-top: 5px;
+    }
+    
+    hr {
+        padding: 1px;
+        background: #efd510;
+        border-radius: 22px;
+        margin: 10px;
+        border: 0;
+    }
+    
+    label {
+        font-weight: bold;
+        font-weight: bold;
+        float: left;
+        /* width: 50px; */
+        content: max;
+        /* width: max-content; */
+        width: 25%;
+        width: 30%;
+        margin-left: 25px;
+    }
+    
+    input {
+        padding: 2px;
+        border-radius: 18px;
+        border-color: white;
+        border: 0;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    }
+    
+    .houseDetails {
+        margin-left: 20px;
+    }
+    
+    .tableSystem {
+        font-weight: bold;
+        font-weight: bold;
+        /* float: left; */
+        /* width: 50px; */
+        content: max;
+        /* width: max-content; */
+        /* width: 25%; */
+        width: 90%;
+        margin-left: 25px;
     }
     
     @media (max-width: 768px) {
@@ -209,6 +275,61 @@
             <button>Learn more</button>
         </div>
     </div>
+
+    <div class="row">
+        <div class="column" style="background-color:#f2910a;">
+            <h2>Solar Power Calculator</h2>
+            <p> > Fill in the details about your property</p>
+            <hr>
+            <div class="houseDetails">
+                <form>
+                    <label for="postCode">Postcode:</label>
+                    <input type="text" id="postCode" name="postCode"><br><br>
+                    <label for="avgBill">Avg. bill $:</label>
+                    <input type="text" id="avgBill" name="avgBill"><br><br>
+                    <label for="retailer">Retailer:</label>
+                    <input type="text" id="retailer" name="retailer"><br><br>
+                    <label for="bill">Bill:</label>
+                    <input type="text" id="bill" name="bill"><br><br>
+
+                </form>
+            </div>
+
+            <p> > Solar System Details</p>
+            <hr>
+            <div class="houseDetails">
+                <form>
+                    <label for="postCode">Number of Panels:</label>
+                    <input type="text" id="postCode" name="postCode"><br><br>
+                    <label for="avgBill">Panels watt:</label>
+                    <input type="text" id="avgBill" name="avgBill"><br><br>
+                </form>
+            </div>
+            <div>
+                <p>size:</p>
+            </div>
+
+        </div>
+        <div class="column" style="background-color:#fffdfd;">
+            <h2>System / Costs / Savings</h2>
+            <div class="tableSystem">
+                <ul>
+                    <p>SOLAR SYSTEM DETAILS</p>
+                    <hr>
+                    <li>
+                        <p>Solar system capacity</p>
+                        <span>0kW</span>
+                    </li>
+                    <li>Solar generated daily</li>
+                    <li>Daily electricity use</li>
+                    <li>Solar energy stored daily</li>
+                    <li>Energy fed back into grid (daily)</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 <script>
     // JavaScript to handle the navbar toggle functionality
